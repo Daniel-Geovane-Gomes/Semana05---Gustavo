@@ -59,6 +59,21 @@ public class Conta {
         }
     }
     
+    public void transferir(Conta destinatario, double valor){
+        if(valor <= this.saldo){
+            this.saldo -= valor;
+            System.out.printf(this.titular.getNome() + "Saldo após transferência: R$%.2f", this.saldo);
+            System.out.println("");
+            destinatario.saldo += valor;
+            System.out.printf(destinatario.getTitular().getNome() + "Saldo após transferência: R$%.2f", destinatario.getSaldo());
+            System.out.println("");
+        } else {
+            System.out.println("Saldo insuficiente!");
+        }
+        
+        
+    }
+    
     private int gerarNumeroConta(){
         Random random = new Random();
         

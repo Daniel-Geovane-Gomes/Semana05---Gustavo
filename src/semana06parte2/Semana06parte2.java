@@ -28,6 +28,8 @@ public class Semana06parte2 {
         
         banco.get(0).sacar(500.0);
         banco.get(2).sacar(80.0);
+        
+        banco.get(0).transferir(banco.get(2), 100);
     }
     
 }
